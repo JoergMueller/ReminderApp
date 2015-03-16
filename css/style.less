@@ -1,0 +1,54 @@
+// out: ./style.min.css, compress: true, strictMath: true
+
+@import 'functions.less';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover { text-decoration: none; }
+}
+
+.tab-pane:before, .list-group-item:before, div[class^="row"]:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table;
+    content: " ";
+}
+
+.tab-pane:after, .list-group-item:after, div[class^="row"]:after {
+    clear: both;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table;
+    content: " ";
+}
+
+div.form-group:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table;
+    content: " ";
+}
+
+div.form-group:after {
+    clear: both;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table;
+    content: " ";
+}
+
+@import 'angular.less';
+@import 'responsive.less';
+
+

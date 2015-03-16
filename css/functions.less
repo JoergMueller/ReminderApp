@@ -1,0 +1,87 @@
+// main: style.less out: null
+
+@family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@background: rgb(255,255,255);
+
+@gray-darker:  lighten(#000, 13.5%); // #222
+@gray-dark:    lighten(#000, 20%);   // #333
+@gray:         lighten(#000, 33.5%); // #555
+@gray-light:   lighten(#000, 46.7%); // #777
+@gray-lighter: lighten(#000, 93.5%); // #eee
+
+
+.font(@size: false, @col: #fff) {
+	color: darken(@col, 75%) !important;
+	font-weight: 100;
+	letter-spacing: 0.032em;
+	& when (@size = false) {
+		font: 14px/18px @family;
+	}
+}
+
+.rounded-corners (@radius: 5px) {
+	border-radius: @radius !important;
+	-webkit-border-radius: @radius !important;
+	-moz-border-radius: @radius !important;
+}
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+	box-shadow:		 @style @c;
+	-webkit-box-shadow: @style @c;
+	-moz-box-shadow:	@style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+	.box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+
+.text-shadow(@style, @c) when (iscolor(@c)) {
+	text-shadow: @style @c;
+}
+
+.bg-gradient(@col-start:rgb(73, 72, 82); @col-end:rgb(42, 42, 48)) {
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, @col-start), color-stop(100%, @col-end));
+	background-image: -webkit-linear-gradient(top, @col-start, @col-end);
+	background-image: -moz-linear-gradient(top, @col-start, @col-end);
+	background-image: -o-linear-gradient(top, @col-start, @col-end);
+	background-image: linear-gradient(top, @col-start, @col-end);
+}
+
+.opacity(@opacity) {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = @opacity )";
+	filter: alpha(opacity=@opacity);
+	-moz-opacity: (@opacity/100);
+	-khtml-opacity: (@opacity/100);
+	opacity: (@opacity/100);
+}
+
+.transition(@p: all, @t: .5s, @timing: ease-in-out, @delay: .2s) {
+    -webkit-transition: @p @t @timing @delay;
+    -moz-transition: @p @t @timing @delay;
+    -o-transition: @p @t @timing @delay;
+    transition: @p @t @timing @delay;
+}
+
+.borderLightning(@c: rgba(168, 200, 255, 0.75)) {
+	.box-shadow(0px 0px 4px 1px, @c);
+}
+
+img {
+    transform-origin: top left; /* IE 10+, Firefox, etc. */
+    -webkit-transform-origin: top left; /* Chrome */
+    -ms-transform-origin: top left; /* IE 9 */
+}
+img.rotate90 {
+    transform: rotate(90deg) translateY(-100%);
+    -webkit-transform: rotate(90deg) translateY(-100%);
+    -ms-transform: rotate(90deg) translateY(-100%);
+}
+img.rotate180 {
+    transform: rotate(180deg) translate(-100%,-100%);
+    -webkit-transform: rotate(180deg) translate(-100%,-100%);
+    -ms-transform: rotate(180deg) translateX(-100%,-100%);
+}
+img.rotate270 {
+    transform: rotate(270deg) translateX(-100%);
+    -webkit-transform: rotate(270deg) translateX(-100%);
+    -ms-transform: rotate(270deg) translateX(-100%);
+}

@@ -1,0 +1,38 @@
+
+<form name="userForm" class="margin-top-40"
+    ng-submit="UserCtrl.setUserData()"
+    novalidate>
+    
+    <h2 translate>Usersettings</h2>
+
+    
+    <div class="form-group">
+        <label class="block"> <span translate>Nickname</span>:
+            <input class="form-control" type="text" name="user.nickname" value="" ng-model="UserCtrl.User.nickname" required></label>
+    </div>
+    
+    <div class="form-group">
+        <label class="block"> <span translate>Firstname</span>:
+            <input class="form-control" type="text" name="user.firstname" value="" ng-model="UserCtrl.User.firstname"></label>
+    </div>
+    
+    <div class="form-group">
+        <label class="block"> <span translate>Name</span>:
+            <input class="form-control" type="text" name="user.name" value="" ng-model="UserCtrl.User.name"></label>
+    </div>
+    
+    <div class="form-group">
+        <label class="block"> <span translate>E-Mail</span>:
+            <input class="form-control" type="mail" name="user.email" value="" ng-model="UserCtrl.User.email"></label>
+    </div>
+    
+    
+    
+    <div class="form-group text-right">
+        <button class="btn btn-primary btn-sm" translate>save userdata</button>
+    </div>
+    
+    <pre ng-if="main.debug">{{UserCtrl.User}}</pre>
+    
+
+</form>

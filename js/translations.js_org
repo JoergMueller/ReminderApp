@@ -1,0 +1,5 @@
+angular.module('ReminderApp').run(['gettextCatalog', function (gettextCatalog) {
+/* jshint -W100 */
+    gettextCatalog.setStrings('de', {"Hello":"Hallo","Name of the List":"Name der Liste","Settings":"Einstellungen","clear lists":"lösche alle Listen","save":"speichern","no entries found":"keine Einträge gefunden","Create new Entry":"Neuen Eintrag erstellen","Expire":"fällig spätestens am","Title":"Titel","create new list":"neue Liste erstellen","Are you sure?":"sind Sie sicher?","intro_message":"[h3]Alle Daten werden ausschließlich lokal in den localStores Ihres Browsers gespeichert. [u][i]Keinerlei[/i][/u] Daten werden zu unseren Servern übertragen. [small]Das bedeutet aber auch, sollten Sie in den Einstellungen Ihrer Browser die Einstellung \"für das löschen aller Daten beim schließen des Browser\" aktiviert haben, können unter Umständen Ihre gesamten Daten, der ToDo Listen, verloren gehen.[/small][/h3]\n\n[blockquote]a) erstellen Sie unter den Einstellungen Ihre eigene Liste(n)\nb) dann erstellen Sie Ihre [b]ToDos[/b] in Ihrer Liste[/blockquote]"});
+/* jshint +W100 */
+}]);

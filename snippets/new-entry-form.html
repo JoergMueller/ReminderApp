@@ -1,0 +1,45 @@
+
+
+<hr>
+
+<form name="newEntryForm" class="margin-top-40" ng-submit="newEntryForm.$valid && tab.setTodos(item, this)">
+
+   <h2 translate>Create new Entry</h2>
+    
+    <div class="form-group">
+        <label class="block"> {{'Title' | translate}}:
+            <input class="form-control" type="text" name="todo.title" value="" placeholder="" ng-model="tab.newEntry.title"></label>
+            
+    </div>
+    
+    <div class="form-group">
+        <label class="block"> {{'Description' | translate}}:
+        <div rich-text-editor ng-model="tab.newEntry.description"></div>
+        </label>
+            
+    </div>
+    
+    <div class="form-group">
+        <label class="block"> <span translate>Location</span> <small>{{'write a City or Region and we will try to get the Geo-Coordinates' | translate}}</small>:
+            <input class="form-control" type="text" name="todo.georeverse" ng-value="" placeholder="" ng-model="tab.newEntry.georeverse"></label>
+    </div>
+    
+    <div class="form-group">
+        <label class="block"> {{'Expire' | translate}}:<br>
+            <input class="form-control" type="datetime-local" name="todo.expire" ng-value="{{ Date(tab.newEntry.expire) | date:'yyyy-MM-dd HH:mm:ss':localeSet.timezone }}" placeholder="" ng-model="tab.newEntry.expire" required></label>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary btn-sm pull-right" translate>save</button>
+        <div class="clearfix"><!-- --></div>
+    </div>
+    
+    <div class="clearfix"><!-- --></div>
+    
+    <pre ng-if="main.debug">{{ tab.newEntry }}</pre>
+
+</form>
+
+
+<div class="clearfix"><!-- --></div>
+

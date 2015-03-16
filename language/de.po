@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ReminderApp\n"
+"POT-Creation-Date: 2015-03-04 16:18+0100\n"
+"PO-Revision-Date: 2015-03-04 20:49+0100\n"
+"Last-Translator: Jörg Müller <joerg.mueller@locomea.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: de\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "MODAL_TRIGGER"
+msgstr "[script]MC.showModal(\"#helper\")[/script]"
+
+msgid "WELCOME_MESSAGE"
+msgstr "Hallo %s, willkommen zurück!"
+
+msgid "Name of the List"
+msgstr "Name der Liste"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "clear lists"
+msgstr "lösche alle Listen"
+
+msgid "save"
+msgstr "speichern"
+
+msgid "save userdata"
+msgstr "Benutzereinstellungen speichern"
+
+msgid "no entries found"
+msgstr "keine Einträge gefunden"
+
+msgid "Create new Entry"
+msgstr "Neuen Eintrag erstellen"
+
+msgid "Expire"
+msgstr "fällig spätestens am"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "create new list"
+msgstr "neue Liste erstellen"
+
+msgid "Are you sure?"
+msgstr "sind Sie sicher?"
+
+msgid "Meine ToDo-Liste(n)"
+msgstr "Meine ToDo-Liste(n)"
+
+msgid "Location"
+msgstr "Location"
+
+msgid "created"
+msgstr "erstellt"
+
+msgid "until time"
+msgstr "bis Uhrzeit"
+
+msgid "Usersettings"
+msgstr "Benutzereinstellungen"
+
+msgid "Guest"
+msgstr "Gast"
+
+msgid "Nickname"
+msgstr "Nickname"
+
+msgid "Firstname"
+msgstr "Vorname"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Description"
+msgstr "Beschreibung und Notizen"
+
+msgid "E-Mail"
+msgstr "E-Mail"
+
+msgid "write a City or Region and we will try to get the Geo-Coordinates"
+msgstr "setzen Sie hier eine Stadt oder Region oder Adresse und wir werden versuchen die Geo-Koordinaten zu ermitteln"
+
+msgid "intro_message"
+msgstr ""
+"[h3]Alle Daten werden ausschließlich lokal in den localStores Ihres Browsers "
+"gespeichert. [u][i]Keinerlei[/i][/u] Daten werden zu unseren Servern "
+"übertragen. [small]Das bedeutet aber auch, sollten Sie in den Einstellungen "
+"Ihrer Browser die Einstellung \"für das löschen aller Daten beim schließen "
+"des Browser\" aktiviert haben, können unter Umständen Ihre gesamten Daten, "
+"der ToDo Listen, verloren gehen.[/small][/h3]\n"
+"\n"
+"[blockquote]a) erstellen Sie unter den Einstellungen Ihre eigene Liste(n)\n"
+"b) dann erstellen Sie Ihre [b]ToDos[/b] in Ihrer Liste[/blockquote]"

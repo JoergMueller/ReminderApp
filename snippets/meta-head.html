@@ -1,0 +1,14 @@
+
+<div class="margin-top-10 pull-left">
+    <span>{{'WELCOME_MESSAGE'  | translate | bbcode | sprintf:[(UserCtrl.User.nickname||('Guest' | translate))] }}</span>
+</div>
+
+<div class="margin-top-10 pull-right">
+    <i class="fa fa-flag-o fa-2x margin-right-10"></i>
+    <select class="form-control inline-block" name="correctlyLanguageSelected"
+        ng-model="correctlyLanguageSelected"
+        ng-options="opt as opt.label for opt in main.options"
+        ng-change="switchLanguage(correctlyLanguageSelected)"></select>
+</div>
+               
+<div class="clearfix"><!-- --></div>

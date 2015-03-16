@@ -1,0 +1,16 @@
+
+<li ng-class="{'done list-group-item':tab.isDone(entry), 'list-group-item':!tab.isDone(entry), 'even':($index%2==0)}" ng-repeat="entry in entries[item.id] | orderBy:'expire'">
+    <h4 class="list-group-item-heading"><span>{{item.name}} – {{entry.title}} – <span translate>Expire</span>: {{entry.expire | date:localeSet.datefmt:localeSet.timezone }}</span> <small><span translate>created</span>: <time  am-time-ago="entry.createdOn" title="{{ entry.createdOn | amDateFormat: localSet.datefmt }}"></time></small> <span ng-if="tab.isDone(entry)">– done: {{entry.doneOn | date:'dd.MM.yyyy' }}</span></h4>
+<p class="list-group-item-text" ng-bind-html="entry.description">{{entry.description}}</p>
+<p class="list-group-item-text">
+    <a href ng-really-message="{{'Are you sure?' | translate}}" ng-really-click="tab.removeTodo(entry,item)" class="pull-right"><i class="fa fa-times"></i></a>
+    <a href ng-click="tab.getEdit(entry)" class="pull-right margin-right-10"><i class="fa fa-pencil"></i></a>
+    <input data-id="{{entry.id}}" data-item="{{item.id}}" class="pull-right margin-right-10 setdone" type="checkbox" name="done[{{entry.id}}]"
+        ng-click="tab.setDone(entry,item)" ng-checked="tab.isDone(entry)">
+</p>
+
+  <pre ng-if="main.debug">{{localeSet}}</pre>
+  <pre ng-if="main.debug">{{entry}}</pre>
+
+</li>
+<li class="list-group-item" ng-if="!entries[item.id].length"><small translate>no entries found</small></li>

@@ -1,0 +1,21 @@
+
+<form name="newTab" class="margin-top-40"
+    ng-controller="RemTabbingForm as tabform"
+    ng-submit="newTab.$valid && tabform.setNewList(newList)"
+    novalidate>
+                            
+    <div class="form-group">
+                                
+        <label class="block">{{'Name of the List' | translate}}:
+            <input class="form-control" type="text" name="newList.name" value="" placeholder="" ng-model="newList.name" required></label>                    
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary btn-sm pull-right" translate>create new list</button>
+        <button translate class="btn btn-danger btn-sm pull-right margin-right-10" ng-really-message="{{'Are you sure?' | translate}}" ng-really-click="localStorage.clear();window.location.reload();">clear lists</button>
+
+    </div>
+                           
+    <pre ng-if="main.debug">{{newList}}</pre>
+                            
+</form>
