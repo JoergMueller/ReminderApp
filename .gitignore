@@ -23,3 +23,6 @@ js/node/*
 
 # bower modules
 js/bower_components/*
+
+# phpstorm
+.idea/*
