@@ -268,11 +268,10 @@
     }]);
     
     app.filter('bbcode', function() {
-        var span = document.createElement('span');
-        return function(input) {
-            return (input || '').replace(/\n/g, '<br>')
-                    .replace(/(\[([\/a-z0-9 ]+)\])/g, '<$2>');
-        }
+		return function(input) {
+			return (input || '').replace(/\n/g, '<br>')
+				.replace(/\[(\/?.+?)\]/g, '<$1>');
+		}
     });
     
     app.filter('sprintf', function() {
